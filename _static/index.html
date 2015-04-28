@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
@@ -22,6 +22,10 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="js/ie-emulation-modes-warning.js"></script>
@@ -36,10 +40,10 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body data-spy="scroll" data-target="#mainNavbar">
 
         <header class="">
-            <nav class="main-navbar navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav class="main-navbar navbar navbar-default navbar-fixed-top" role="navigation" id="mainNavbar">
                 <div class="container">
                     <ul class="nav navbar-nav">
                         <li class="logo image">
@@ -50,24 +54,29 @@
                     </ul>
                     <ul class="nav navbar-nav">
                         <li class="">
-                            <a href="">
+                            <a href="#elkey">
                                 Кулачковые переключатели
                             </a>
                         </li>
                         <li class="">
-                            <a href="">
+                            <a href="#about">
                                 О компании
                             </a>
                         </li>
                         <li class="">
-                            <a href="">
+                            <a href="#partners">
                                 Партнеры
                             </a>
                         </li>
                         <li class="">
-                            <a href="">
+                            <a href="#contacts">
                                 Контакты
                             </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="contacts" id="navbarContacts">
+                            <a href="#">8 (835) 222-27-81</a>
                         </li>
                     </ul>
                 </div>
@@ -80,22 +89,21 @@
                 <!-- Carousel ================================================== -->
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img class="first-slide" src="uploads/banner_01.jpg" alt="First slide" data-stellar-ratio="1.4" data-stellar-vertical-offset="-102">
+                        <div class="item active" style="background-image: url(uploads/banner_01.jpg)">
                             <div class="container banner-contacts-block">
-                                <div class="col-xs-8">
+                                <div class="col-xs-7">
 
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-xs-5">
                                     <div class="contacts">
                                         <div class="address">
                                             г. Чебоксары, проспект И. Яковлева, 3
                                         </div>
                                         <div class="phone">
-                                            +7 8352 12-34-45
+                                            8 (835) 222-27-81
                                         </div>
-                                        <div class="callback">
-                                            <a href="#">Заказать обратный звонок</a>
+                                        <div class="email">
+                                            <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:sales@elekkom.ru?">sales@elekkom.ru</a>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +116,7 @@
                                     <div class="col-xs-8">
                                         <h1>Кулачковые<br>переключатели</h1>
                                         <p>Кулачковые переключатели Elkey серии CS для нужд производственных и промышленных предприятий, а так же для сфер народного хозяйства.</p>
-                                        <p><a class="btn btn-lg btn-default" href="#" role="button">Заказать каталог продукции</a></p>
+                                        <p><a class="btn btn-lg btn-danger" href="#" role="button">Заказать каталог продукции</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -117,15 +125,16 @@
                 </div><!-- /.carousel -->
             </div>
 
-            <div class="block benefits-block">
-                <div class="container">
-                    <h2>Основные характеристики переключателей Elkey</h2>
+            <div class="block benefits-block ">
+                <div class="container top-bottom-shadow">
+                <br><br>
+                    <h2 id="elkey">Основные характеристики переключателей Elkey</h2>
                     <hr>
                     <div class="row">
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_09.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_09.jpg" alt="...">
                                     </a>
                                 </div>
@@ -137,7 +146,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_01.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_01.jpg" alt="...">
                                     </a>
                                 </div>
@@ -149,7 +158,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_10.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_10.jpg" alt="...">
                                     </a>
                                 </div>
@@ -163,7 +172,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_05.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_05.jpg" alt="...">
                                     </a>
                                 </div>
@@ -175,7 +184,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_17.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_17.jpg" alt="...">
                                     </a>
                                 </div>
@@ -187,7 +196,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_18.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_18.jpg" alt="...">
                                     </a>
                                 </div>
@@ -201,7 +210,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_21.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_21.jpg" alt="...">
                                     </a>
                                 </div>
@@ -213,7 +222,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_15.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_15.jpg" alt="...">
                                     </a>
                                 </div>
@@ -225,7 +234,7 @@
                         <div class="col-xs-4">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="media-link">
+                                    <a href="uploads/benefit_12.jpg" class="media-link fancybox-image-link" rel="elkey">
                                         <img class="media-object" src="uploads/thumb_benefit_12.jpg" alt="...">
                                     </a>
                                 </div>
@@ -237,51 +246,20 @@
 
                     </div>
 
-                    <a href="#" class="btn btn-default">Запростить техническое описание</a>
+                    <a href="#" class="btn btn-link">Запростить техническое описание</a>
+
+                    <br><br><br>
                 </div>
-            </div>
+
+
+
             </div>
 
-            <!-- <div class="compare-block">
-                <div class="container">
-                    <table class="table">
-                        <tr>
-                            <td></td>
-                            <td>Кулачковые переключатели</td>
-                            <td>Кулачковые переключатели Elkey</td>
-                        </tr>
-                        <tr>
-                            <td>Параметр 1</td>
-                            <td><span class="glyphicon glyphicon-remove"></span></td>
-                            <td><span class="glyphicon glyphicon-ok"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Параметр 1</td>
-                            <td><span class="glyphicon glyphicon-remove"></span></td>
-                            <td><span class="glyphicon glyphicon-ok"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Параметр 1</td>
-                            <td><span class="glyphicon glyphicon-remove"></span></td>
-                            <td><span class="glyphicon glyphicon-ok"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Параметр 1</td>
-                            <td><span class="glyphicon glyphicon-remove"></span></td>
-                            <td><span class="glyphicon glyphicon-ok"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Параметр 1</td>
-                            <td><span class="glyphicon glyphicon-remove"></span></td>
-                            <td><span class="glyphicon glyphicon-ok"></span></td>
-                        </tr>
-                    </table>
-                </div>
-            </div> -->
+
 
             <div class="block about-block">
                 <div class="container">
-                    <h2>О компании &laquo;ЭлекКом Логистик&raquo;</h2>
+                    <h2 id="about">О компании &laquo;ЭлекКом Логистик&raquo;</h2>
                     <hr>
                     <div class="row">
                         <div class="col-xs-8">
@@ -289,6 +267,7 @@
                                 <p>Компания ООО "ЭлекКом Логистик" основана в 2009 году и зарекомендовала себя как надежный партнер. Наша компания является крупнейшим поставщиком электронных компонентов и электротехнической продукции в России.</p>
                                 <p>ООО «ЭлекКом Логистик» уже долгое время сотрудничает с крупнейшими мировыми производителями электротехнической продукции.</p>
                             </div>
+                            <br><br><br>
                             <div class="row">
                                 <div class="col-xs-4">
                                     <div class="media">
@@ -358,23 +337,23 @@
                             <div class="row">
                                 <div class="col-xs-6">
                                     <div class="">
-                                        <a href="#" class="thumbnail"><img src="uploads/thumb_sert_01.jpg" alt="..."></a>
+                                        <a href="uploads/sert_01.jpg" class="thumbnail fancybox-image-link" rel="sert"><img src="uploads/thumb_sert_01.jpg" alt="..."></a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="">
-                                        <a href="#" class="thumbnail"><img src="uploads/thumb_sert_04.jpg" alt="..."></a>
+                                        <a href="uploads/sert_04.jpg" class="thumbnail fancybox-image-link" rel="sert"><img src="uploads/thumb_sert_04.jpg" alt="..."></a>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-6">
                                     <div class="">
-                                        <a href="#" class="thumbnail"><img src="uploads/thumb_sert_05.jpg" alt="..."></a>
+                                        <a href="uploads/sert_05.jpg" class="thumbnail fancybox-image-link" rel="sert"><img src="uploads/thumb_sert_05.jpg" alt="..."></a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="">
-                                        <a href="#" class="thumbnail"><img src="uploads/thumb_sert_06.jpg" alt="..."></a>
+                                        <a href="uploads/sert_06.jpg" class="thumbnail fancybox-image-link" rel="sert"><img src="uploads/thumb_sert_06.jpg" alt="..."></a>
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +364,7 @@
 
             <div class="block contragents-block">
                 <div class="container">
-                    <h2>Наши партнеры</h2>
+                    <h2 id="partners">Наши партнеры</h2>
                     <hr>
                     <table>
                         <tr>
@@ -403,6 +382,8 @@
                 </div>
             </div>
 
+            <br><br><br><br>
+
             <div class="block reviews-block">
                 <div class="container">
                     <h2>Отзывы контрагентов</h2>
@@ -410,28 +391,28 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="">
-                                <a href="#" class="thumbnail">
+                                <a href="uploads/review_02.jpg" class="thumbnail fancybox-image-link" rel="reviews">
                                     <img src="uploads/review_02.jpg" alt="...">
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-3">
                             <div class="">
-                                <a href="#" class="thumbnail">
+                                <a href="uploads/review_03.jpg" class="thumbnail fancybox-image-link" rel="reviews">
                                     <img src="uploads/review_03.jpg" alt="...">
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-3">
                             <div class="">
-                                <a href="#" class="thumbnail">
+                                <a href="uploads/review_04.jpg" class="thumbnail fancybox-image-link" rel="reviews">
                                     <img src="uploads/review_04.jpg" alt="...">
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-3">
                             <div class="">
-                                <a href="#" class="thumbnail">
+                                <a href="uploads/review_01.jpg" class="thumbnail fancybox-image-link" rel="reviews">
                                     <img src="uploads/review_01.jpg" alt="...">
                                 </a>
                             </div>
@@ -440,8 +421,10 @@
                 </div>
             </div>
 
+            <br><br>
+
             <div class="block question-block">
-                <div class="container">
+                <div class="container top-bottom-shadow">
                     <h2>Остались вопросы?</h2>
                     <hr>
                     <form>
@@ -465,7 +448,7 @@
                                     <label for="commentInput">Комментарий</label>
                                     <textarea id="commentInput" class="form-control" placeholder="Что вас интересует?"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-default btn-lg">Отправить</button>
+                                <button type="submit" class="btn btn-danger btn-lg">Отправить заявку</button>
                             </div>
                         </div>
                     </form>
@@ -474,18 +457,39 @@
 
             <div class="block contacts-block">
                 <div class="container">
-                    <h2>Контактная информация</h2>
+                    <h2 id="contacts">Контактная информация</h2>
+                    <hr>
+                    <dl class="dl-horizontal">
+                        <dt>Телефоны</dt>
+                        <dd ><a style="font-size: 22px;" href="tel:8 (800) 500-99-84">8 (800) 500-99-84</a>&nbsp;&nbsp;&nbsp;(единый номер, звонок по России бесплатный)</dd>
+                        <dd ><a style="font-size: 22px;" href="tel:+7 (835) 222-27-81">8 (835) 222-27-81</a></dd>
+                    </dl>
+
+                    <dl class="dl-horizontal">
+                        <dt>Email</dt>
+                        <dd><a title="Написать письмо" href="mailto:sales@elekkom.ru">sales@elekkom.ru</a></dd>
+                    </dl>
+
+                    <dl class="dl-horizontal">
+                        <dt>Адреса</dt>
+                        <dd>г. Чебоксары, пр. И. Яковлева, 3 (отдел продаж)</dd>
+                        <dt>Региональные офисы</dt>
+                        <dd>г. Йошкар-Ола, ул. Машиностроителей, д. 126</dd>
+                        <dd>г. Нижний Новгород, ш. Жирокомбинат, 8 А</dd>
+                        <dd>г. Самара, ул. Верхне-Карьерная, д.6</dd>
+                    </dl>
+
                 </div>
                 <script type="text/javascript">
                     ymaps.ready(function () {
                         var myMap = new ymaps.Map('map', {
-                                center: [56.136577, 47.249965],
+                                center: [56.11170403, 47.25897379],
                                 zoom: 16
                             }),
                             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                                balloonContent: '<strong>Клуб "<?=$club->title?>"</strong><br>Адрес: <?=$club->contact_address?><br>Телефон: <?=$club->contact_phones?>',
-                                iconContent: '<?=$club->title?>',
-                                hintContent: '<?=$club->title?>'
+                                balloonContent: '<strong>ООО &laquo;ЭлекКом Логистик&raquo;</strong><br>Адрес: г. Чебоксары, пр. И. Яковлева, 3',
+                                iconContent: 'ООО &laquo;ЭлекКом Логистик&raquo;',
+                                hintContent: 'ООО &laquo;ЭлекКом Логистик&raquo;'
                             }, {
                                 // Опции.
                                 preset: 'islands#blackStretchyIcon'
@@ -502,39 +506,27 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-8">
                         <div class="footer-block1">
-                            <div class="copyright">&copy; 2010-{{w:CurrentYear}} Компания &laquo;ЭлекКом&raquo;</div>
-                            <div>Производство низковольтных комплектных устройств</div>
-                            <br />
-                            <div>Другое направление компании &laquo;ЭлекКом&raquo;&nbsp;&mdash; <a target="_blank" href="http://elekkom.ru">поставка электронных компонентов и&nbsp;электротехнической продукции в&nbsp;России</a></div>
+                            <div class="copyright">&copy; 2009-2015 Компания &laquo;ЭлекКом Логистик&raquo;</div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="footer-block2 pull-right">
-                            <div class="phone">8 (800) 500-99-84</div>
-                            <div class="phone-note"><small>Звонок по России бесплатный</small></div>
-                            <br />
-                            <div>{{w:CallbackFormWidget|modal=true;form_caption=Заказать обратный звонок;form_description=Пожалуйста, укажите свои контактные данные, а так же время, в которое вас удобно будет побеспокоить.;form_button_text=Заказать обратный звонок;form_button_type=dark-red;form_button_size=large;button_text=Заказать обратный звонок;button_type=dark-red;form_button_yandex_target=CALLBACK_FORM_BUTTON;button_yandex_target_param=FOOTER;button_yandex_target=CALLBACK_BUTTON;form_button_yandex_target_param=FOOTER}}</div>
+                            <div class="phone">8 (835) 222-27-81</div>
+                            <div class="email">
+                                <a href="mailto:sales@elekkom.ru">sales@elekkom.ru</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-2"><a href="/sitemap/" title="Карта сайта">Карта сайта</a></div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-xs-10">
-                        <div style="font-size: 11px; color: white"><b>Свидетельство:</b> Серия 21 №002429877 от 18.02.2014 г.</div>
-                        <div style="font-size: 11px; color: white"><b>Генеральный директор</b>: Филиппов Станислав Борисович</div>
-                        <div style="font-size: 11px; color: white"><b>Адрес места нахождения</b>: 428000, Чувашская Республика, г. Чебоксары, пр. И.Я. Яковлева, д.3</div>
-                        <div style="font-size: 11px; color: white"><b>БИК</b>: 049706609</div>
-                        <div style="font-size: 11px; color: white"><b>К/с</b>: 30101810300000000609</div>
-                        <div style="font-size: 11px; color: white"><b>ОГРН</b>: 1142130002442</div>
-                        <div style="font-size: 11px; color: white"><b>ИНН/КПП</b>: 2130133291/213001001</div>
-                    </div>
-                    <div class="col-xs-2">
-                        <a target="_blank" href="https://www.fabrikant.ru/firms/view_firm.html?id=vfCW0Pi63WGVwut26fxaBKqf0QrrehIGWZngmzB7l3Tqf5SxuC0GHTVNmhqDIKdYczlSRkKkNcNGi6oiL85BWQ&page=0" title="Надёжный поставщик Fabrikant"><img alt="Надёжный поставщик Fabrikant" title="Надёжный поставщик Fabrikant" src="/uploads/Medal_128.png" style="width: 80px"></a>
-                    </div>
-                </div>
+                <div style="font-size: 11px; color: white"><b>Свидетельство:</b> Серия 21 №002429877 от 18.02.2014 г.</div>
+                <div style="font-size: 11px; color: white"><b>Адрес места нахождения</b>: 428000, Чувашская Республика, г. Чебоксары, пр. И.Я. Яковлева, д.3</div>
+                <div style="font-size: 11px; color: white"><b>БИК</b>: 049706609</div>
+                <div style="font-size: 11px; color: white"><b>К/с</b>: 30101810300000000609</div>
+                <div style="font-size: 11px; color: white"><b>ОГРН</b>: 1142130002442</div>
+                <div style="font-size: 11px; color: white"><b>ИНН/КПП</b>: 2130133291/213001001</div>
             </div>
         </footer>
 
@@ -548,6 +540,13 @@
         <script src="js/holder.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
         <script src="js/main.js"></script>
     </body>
