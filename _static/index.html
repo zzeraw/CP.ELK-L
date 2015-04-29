@@ -8,7 +8,8 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+        <link rel="icon" href="favicon.ico">
 
         <title>Кулачковые переключатели Elkey</title>
 
@@ -21,6 +22,8 @@
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
 
         <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
@@ -114,9 +117,9 @@
 
                                     </div>
                                     <div class="col-xs-8">
-                                        <h1>Кулачковые<br>переключатели</h1>
-                                        <p>Кулачковые переключатели Elkey серии CS для нужд производственных и промышленных предприятий, а так же для сфер народного хозяйства.</p>
-                                        <p><a class="btn btn-lg btn-danger" href="#" role="button">Заказать каталог продукции</a></p>
+                                        <h1 class="animated slideInDown">Кулачковые<br>переключатели</h1>
+                                        <p>Кулачковые переключатели Elkey серии CS для нужд производственных и промышленных предприятий, а так же для сферы народного хозяйства.</p>
+                                        <p><a class="btn btn-lg btn-danger animated fadeIn" href="#catalogModal" role="button" data-toggle="modal" data-target="#catalogModal"><span class="glyphicon glyphicon-book"></span> Заказать каталог продукции</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +131,7 @@
             <div class="block benefits-block ">
                 <div class="container top-bottom-shadow">
                 <br><br>
-                    <h2 id="elkey">Основные характеристики переключателей Elkey</h2>
+                    <h2 id="elkey" class="animated slideInLeft">Основные характеристики переключателей Elkey</h2>
                     <hr>
                     <div class="row">
                         <div class="col-xs-4">
@@ -246,7 +249,7 @@
 
                     </div>
 
-                    <a href="#" class="btn btn-link">Запростить техническое описание</a>
+                    <a href="#techModal" role="button" data-toggle="modal" data-target="#techModal" class="btn btn-link"><span class="glyphicon glyphicon-cog"></span> Запростить техническое описание</a>
 
                     <br><br><br>
                 </div>
@@ -259,13 +262,13 @@
 
             <div class="block about-block">
                 <div class="container">
-                    <h2 id="about">О компании &laquo;ЭлекКом Логистик&raquo;</h2>
+                    <h2 id="about" class="animated slideInLeft">О компании &laquo;ЭлекКом Логистик&raquo;</h2>
                     <hr>
                     <div class="row">
                         <div class="col-xs-8">
                             <div>
-                                <p>Компания ООО "ЭлекКом Логистик" основана в 2009 году и зарекомендовала себя как надежный партнер. Наша компания является крупнейшим поставщиком электронных компонентов и электротехнической продукции в России.</p>
-                                <p>ООО «ЭлекКом Логистик» уже долгое время сотрудничает с крупнейшими мировыми производителями электротехнической продукции.</p>
+                                <p>Компания ООО &laquo;ЭлекКом Логистик&raquo; основана в&nbsp;2009 году и&nbsp;зарекомендовала себя как надежный партнер. Наша компания является крупнейшим поставщиком электронных компонентов и&nbsp;электротехнической продукции в&nbsp;России.</p>
+                                <p>ООО &laquo;ЭлекКом Логистик&raquo; уже долгое время сотрудничает с&nbsp;крупнейшими мировыми производителями электротехнической продукции.</p>
                             </div>
                             <br><br><br>
                             <div class="row">
@@ -364,7 +367,7 @@
 
             <div class="block contragents-block">
                 <div class="container">
-                    <h2 id="partners">Наши партнеры</h2>
+                    <h2 id="partners" class="animated slideInLeft">Наши партнеры</h2>
                     <hr>
                     <table>
                         <tr>
@@ -386,7 +389,7 @@
 
             <div class="block reviews-block">
                 <div class="container">
-                    <h2>Отзывы контрагентов</h2>
+                    <h2 class="animated slideInLeft">Отзывы контрагентов</h2>
                     <hr>
                     <div class="row">
                         <div class="col-xs-3">
@@ -425,22 +428,22 @@
 
             <div class="block question-block">
                 <div class="container top-bottom-shadow">
-                    <h2>Остались вопросы?</h2>
+                    <h2 class="animated slideInLeft">Остались вопросы?</h2>
                     <hr>
                     <form>
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="form-group">
                                     <label for="inputName">Ф.И.О.</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Представьтесь">
+                                    <input type="text" class="form-control" id="inputName" placeholder="Представьтесь" data-validation="required">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPhone">Конатктный телефон</label>
-                                    <input type="phone" class="form-control" id="inputPhone" placeholder="Введите номер телефона">
+                                    <input type="phone" class="form-control" id="inputPhone" placeholder="Введите номер телефона" data-validation="required">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail">Контактный Email</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Введите Email">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Введите Email" data-validation="required">
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -448,7 +451,7 @@
                                     <label for="commentInput">Комментарий</label>
                                     <textarea id="commentInput" class="form-control" placeholder="Что вас интересует?"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-lg">Отправить заявку</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-submit" id="">Отправить заявку</button>
                             </div>
                         </div>
                     </form>
@@ -457,7 +460,7 @@
 
             <div class="block contacts-block">
                 <div class="container">
-                    <h2 id="contacts">Контактная информация</h2>
+                    <h2 id="contacts" class="animated slideInLeft">Контактная информация</h2>
                     <hr>
                     <dl class="dl-horizontal">
                         <dt>Телефоны</dt>
@@ -548,6 +551,67 @@
         <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
         <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
+        <script type="text/javascript" src="js/jquery.form-validator.min.js"></script>
+
+
         <script src="js/main.js"></script>
+
+
+        <div class="modal fade" id="catalogModal" tabindex="-1" role="dialog" aria-labelledby="catalogModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="catalogModalLabel">Заказ каталога Elkey</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Ф.И.О.</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Представьтесь">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone">Конатктный телефон</label>
+                                <input type="phone" class="form-control" id="inputPhone" placeholder="Введите номер телефона">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Контактный Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Введите Email">
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg btn-submit" id="">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="techModal" tabindex="-1" role="dialog" aria-labelledby="techModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="techModalLabel">Запросить техническую информацию по Elkey</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Ф.И.О.</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Представьтесь">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone">Конатктный телефон</label>
+                                <input type="phone" class="form-control" id="inputPhone" placeholder="Введите номер телефона">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Контактный Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Введите Email">
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg btn-submit" id="">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

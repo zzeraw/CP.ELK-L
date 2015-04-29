@@ -2,6 +2,14 @@ $( function() {
     // $.stellar();
     $( '.fancybox-image-link' ).fancybox();
 
+    $.validate();
+
+    $( '.btn-submit' ).on('click', function( e ) {
+        e.preventDefault();
+    });
+
+
+
     var arr = [];
 
     $( document ).scroll( function () {
