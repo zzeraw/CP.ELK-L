@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets
+Disallow: /assets/
+Disallow: /admin
+Disallow: /admin/
+
+Host: pocon.ru
