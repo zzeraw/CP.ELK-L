@@ -11,6 +11,7 @@ class FormWidget extends CWidget
     public $form_notice = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure exercitationem, aperiam, dolorem fugiat odio temporibus saepe eius distinctio, deleniti ab, consequuntur tempora praesentium facilis quae eos vero hic ex placeat?';
     public $form_class = 'default-form-class';
     public $form_item = 'Заполнена форма обратной связи';
+    public $form_button_event = false;
 
     public $form_button_text = 'Отправить';
     public $form_button_class = 'btn btn-primary';
@@ -18,6 +19,7 @@ class FormWidget extends CWidget
     public $button_text = 'Оставить заявку';
     public $button_class = 'btn btn-primary';
     public $button_icon = '';
+    public $button_event = false;
 
     public $template_name = 'modal_default_form';
 
@@ -240,6 +242,12 @@ class FormWidget extends CWidget
 
         // var_dump($html_options);
 
+
+        $this->button_event = str_replace('+++', ';', $this->button_event);
+        $this->form_button_event = str_replace('+++', ';', $this->form_button_event);
+        $this->button_event = str_replace('---', '=', $this->button_event);
+        $this->form_button_event = str_replace('---', '=', $this->form_button_event);
+
         $this->render(
             $this->template_name,
             array(
@@ -257,6 +265,9 @@ class FormWidget extends CWidget
                 'button_icon' => $this->button_icon,
 
                 'fields_default_values' => $this->fields_default_values,
+
+                'form_button_event' => $this->form_button_event,
+                'button_event' => $this->button_event,
 
                 'form_widget_id' => $form_widget_id,
                 'email_subject' => $this->email_subject,

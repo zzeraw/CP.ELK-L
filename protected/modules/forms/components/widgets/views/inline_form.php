@@ -90,7 +90,7 @@
                 <?=$form->error($form_model, 'comment');?>
             </div>
 
-            <button type="submit" class="btn btn-danger btn-lg btn-submit" id="">Отправить заявку</button>
+            <button type="submit" class="btn btn-danger btn-lg btn-submit" id="" <?=$form_button_event?>>Отправить заявку</button>
         </div>
     </div>
 

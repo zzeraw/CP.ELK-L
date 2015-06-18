@@ -1,4 +1,4 @@
-<a href="#modal<?=$form_widget_id?>" data-toggle="modal" data-target="#modal<?=$form_widget_id?>" class="<?=$button_class?>">
+<a href="#modal<?=$form_widget_id?>" data-toggle="modal" data-target="#modal<?=$form_widget_id?>" class="<?=$button_class?>" <?=$button_event?>>
 <?=(!empty($button_icon)) ? '<span class="' . $button_icon . '"></span> ' : '' ?><?=$button_text?>
 </a>
 
@@ -100,15 +100,9 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <div class="form-group">
-                            <?=CHtml::submitButton(
-                                $form_button_text,
-                                array(
-                                    'id' => 'submit' . $form_widget_id,
-                                    'class' => $form_button_class,
-                                    'style' => 'width: 100%',
-                                    'data-item' => '',
-                                )
-                            );?>
+                            <button type="submit" class="<?=$form_button_class?>" id="submit<?=$form_widget_id?>" <?=$form_button_event?> style="width: 100%" data-item="">
+                                <?=$form_button_text?>
+                            </button>
                         </div>
                     </div>
                     <div class="col-xs-8">
