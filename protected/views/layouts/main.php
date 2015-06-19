@@ -79,6 +79,9 @@
         }
     ?>
 
+
+    <iframe src="http://elekkom.ru/setCookie.php?name=elekkom-site&value=elkey&expire=<?=3600 * 24 * 2?>" style="height: 0;width: 0; overflow: hidden; display: none;"></iframe>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
