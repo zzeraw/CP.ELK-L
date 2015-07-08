@@ -80,7 +80,15 @@
     ?>
 
 
+
+
     <iframe src="http://elekkom.ru/setCookie.php?name=elekkom-site&value=elkey&expire=<?=3600 * 24 * 2?>" style="height: 0;width: 0; overflow: hidden; display: none;"></iframe>
+
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type='text/javascript'>
+    (function(){ var widget_id = 'lftuN93Pyi';
+    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+    <!-- {/literal} END JIVOSITE CODE -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
