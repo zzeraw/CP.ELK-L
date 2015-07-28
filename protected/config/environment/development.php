@@ -35,6 +35,13 @@ return CMap::mergeArray(
                     ),
                 ),
             ),
+            'amocrm' => array(
+                'class' => 'application.extensions.EAmoCRM.EAmoCRM',
+                'subdomain' => '', // Персональный поддомен на сайте amoCRM
+                'login' => '', // Логин на сайте amoCRM
+                'password' => '', // Пароль на сайте amoCRM
+                // 'hash' => '00000000000000000000000000000000', // Вместо пароля можно использовать API ключ
+            ),
         ),
 
         'modules' => array(

@@ -5,10 +5,10 @@ return CMap::mergeArray(
     array(
         'components'=>array(
             'db' => array(
-                'connectionString' => 'mysql:host=localhost;dbname=######',
+                'connectionString' => 'mysql:host=localhost;dbname=####',
                 'emulatePrepare' => true,
-                'username' => '######',
-                'password' => '######',
+                'username' => '####',
+                'password' => '####',
                 'charset' => 'utf8',
                 'tablePrefix' => '',
             ),
@@ -33,6 +33,14 @@ return CMap::mergeArray(
                     ),
                 ),
             ),
+            'amocrm' => array(
+                'class' => 'application.extensions.EAmoCRM.EAmoCRM',
+                'subdomain' => '', // Персональный поддомен на сайте amoCRM
+                'login' => '', // Логин на сайте amoCRM
+                'password' => '', // Пароль на сайте amoCRM
+                // 'hash' => '00000000000000000000000000000000', // Вместо пароля можно использовать API ключ
+            ),
+
         ),
         'modules' => array(
             // uncomment the following to enable the Gii tool

@@ -1,12 +1,15 @@
 <?php
 $params = array(
-    'adminEmail' => 'pv.danilov.dev@yandex.ru',
-    'fromEmail' => '####',
+    'adminEmail' => '',
+    'fromEmail' => '',
     'managerEmail' => array(
-        '####',
-        'pv.danilov.dev@yandex.ru',
-        '####',
+        ''
+    ),
+    'amocrm' => array(
+        'users' => array(
+            '' => '' ,
+        ),
     ),
 
-    'yaCounter' => '####',
+    'yaCounter' => '',
 );

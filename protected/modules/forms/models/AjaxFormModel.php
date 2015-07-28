@@ -114,70 +114,36 @@ class AjaxFormModel extends DynamicFormModel
         $db->created_ip = Yii::app()->request->getUserHostAddress() . ' ' . Yii::app()->request->getUserAgent();
         $db->created_datetime = date('Y-m-d H:i:s');
 
-        $result = $db->save();
-
-        return SendMail::sendEmail($from, $email, $subject, $message);
-    }
-
-    public function send1()
-    {
-        $email_subject = 123;
-
-        $from = Yii::app()->params['fromEmail'];
-        $email = Yii::app()->params['managerEmail'];
-
-        $subject = $email_subject;
-
-        $message = $email_subject . '<br><br>';
-
-        $message .= $this->item . '<br>';
-
-        $message .= $this->getAttributeLabel('fio') . ': ' . $this->fio . '<br>';
-        $message .= $this->getAttributeLabel('phone') . ': ' . $this->phone . '<br>';
-        $message .= $this->getAttributeLabel('email') . ': ' . $this->email . '<br>';
-
-        $message .= '<br>';
-
-        $message .= $this->getAttributeLabel('comment') . ': ' . $this->comment . '<br>';
-
-        $message .= '<br>';
-
-        $db = new FormRequest;
-
-        $db->fio = $this->fio;
-        $db->phone = $this->phone;
-        $db->email = $this->email;
-        $db->description = json_encode(
-            array(
-                'subject' => $email_subject,
-                'item' => $this->item,
-                'comment' => $this->comment,
-            )
-        );
-        $db->system_info = Yii::app()->session['utm_session'];
-
+        // $result = $db->save();
         if ($db->save()) {
-            $contact =  array(
-                'person_name' => $this->fio,
-                'contact_data' => array(
-                    'phone_numbers' => array(
-                        array('number' => $this->phone),
-                        array('location' => 'Other')
-                    ),
-                    'email_addresses' => array(
-                        array('address' => $this->email),
-                        array('location' => 'Other')
-                    ),
-                ),
-            );
+            $contact = array();
+            $contact['main_user_id'] = '501759';
+
+            if (isset($db->name)) {
+                $contact['person_name'] = $db->name;
+            }
+            if (isset($db->phone)) {
+                $contact['contact_data']['phone_numbers'] = array(
+                    array('number' => $db->phone),
+                    array('location' => 'Other')
+                );
+            }
+            if (isset($db->email)) {
+                $contact['contact_data']['email_addresses'] = array(
+                    array('address' => $db->email),
+                    array('location' => 'Other')
+                );
+            }
 
             $deal = array(
-                'name' => $email_subject . '. ' . $this->item . ' (' . date('Y-m-d H:i:s') . ')',
+                'name' => $email_subject . ' (' . date('Y-m-d H:i:s') . ')',
                 'status_id' => '8310890',
-                'linked_contact' => $add_contact_result,
+                'linked_contact' => '',
+                'main_user_id' => $contact['main_user_id'],
             );
 
-            $deal_note = $db->parseJson($db->description) . '; ' . $db->system_info;
+            $deal_note = $db->parseJson($db->custom);
+
 
             $db->addRequestInAmoCrm($contact, $deal, $deal_note);
         }
